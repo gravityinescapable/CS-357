@@ -1,0 +1,40 @@
+Algorithm:
+
+1. The algorithm is based on column generation technique.
+
+2. Column generation focuses on iteratively adding columns (variables) 
+   to the master problem to find an optimal solution. 
+
+3. In the context of the bus scheduling problem we have:
+
+   Master Problem: The master problem represents 
+   a linear programming relaxation of the original problem. 
+   It contains a subset of variables (columns) from the full problem, 
+   and its solution provides a lower bound on the optimal objective value.
+
+   Pricing Problem: The pricing problem is a subproblem within the column 
+   generation algorithm. It is responsible for finding new columns (variables) 
+   that have negative reduced costs, i.e., they can further improve the objective value. 
+   The pricing problem is a combinatorial problem or a simplified version of the main problem. 
+   In our code, we have a pricing problem for each shift.
+
+4. DAG Connection: While our code doesn't explicitly create a directed acyclic graph, 
+   the concept is related in the following way:
+   In column generation,  the process of adding columns can be viewed as a 
+   directed graph where nodes represent different columns (bus plans) and directed edges 
+   represent the decision to add a new column based on the pricing problem's solution.
+
+5. The graph evolves as we add columns during the iterations, ensuring that we 
+   do not visit the same column more than once. This property results in a 
+   directed acyclic graph because revisiting a column would imply a cycle, 
+   which is undesirable in the column generation process.
+
+6. Termination: The column generation process typically terminates when no more 
+   negative reduced cost columns can be found in the pricing problem. 
+   This corresponds to reaching a situation where no more edges can be added to the graph, 
+   and the optimal solution is achieved.
+
+
+
+
+
