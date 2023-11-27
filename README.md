@@ -7,10 +7,10 @@ This repository contains the code developed for the minor project made as part o
 
 ### Project Hierarchy
 The codebase is organized into the following components:
--'bus_schedule.py': Contains the main code for the project where the column generation technique is implemented
--'data.json': Generated for the input data when data.py is executed
--'data.py': Used to store the input data
--'data_loader.py': Contains function to load the JSON file
+- `bus_schedule.py`: Contains the main code for the project where the column generation technique is implemented
+- `data.json`: Generated for the input data when data.py is executed
+- `data.py`: Used to store the input data
+- `data_loader.py`: Contains function to load the JSON file
 
 ### Pre-requisites
 Install the Gurobi solver for optimization and obtain the corresponding license
@@ -25,6 +25,7 @@ The code can be implemented as follows:
 ```bash
 # To create the data.json file
 $ python data.py
+# To implement the main code
 $ python bus_schedule.py
 ```
 
