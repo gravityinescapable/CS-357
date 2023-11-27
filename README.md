@@ -13,7 +13,7 @@ The codebase is organized into the following components:
 - `data_loader.py`: Contains function to load the JSON file
 
 ### Pre-requisites
-Install the Gurobi solver for optimization and obtain the corresponding license
+Install the Gurobi solver for optimization and obtain the corresponding license.
 Create a virtual environment and install the dependencies.
 ```bash
 $ python -m venv /path/to/new/virtual/environment
